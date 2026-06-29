@@ -54,7 +54,7 @@ if (form) {
 
 // ===== SUBMIT KE APPS SCRIPT =====
 async function submitToAppsScript(formData) {
-  const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx9oEQgvgZhcGN0t6L_cpKmtcgJMQUx1nNoFWQERfEfzWHTY4CF24jO2JKCc__jboeH/exec'; // Ganti dengan URL deploy Apps Script
+  const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwN7yHMJS8hxAFn0ZjMQOjE-laKXC2Npd_sT-5MV-BS3FTU0Ghra3d9arG6Uvzs9OOf/exec; // Ganti dengan URL deploy Apps Script
   const submitBtn = document.getElementById('submit-btn');
   if (submitBtn) { submitBtn.textContent = 'Mengirim...'; submitBtn.disabled = true; }
 
@@ -88,7 +88,7 @@ async function cekStatus() {
   const email = document.getElementById('input-email')?.value.trim();
   if (!noReg && !email) { alert('Masukkan nomor registrasi atau email'); return; }
 
-  const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx9oEQgvgZhcGN0t6L_cpKmtcgJMQUx1nNoFWQERfEfzWHTY4CF24jO2JKCc__jboeH/exec';
+  const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwN7yHMJS8hxAFn0ZjMQOjE-laKXC2Npd_sT-5MV-BS3FTU0Ghra3d9arG6Uvzs9OOf/exec';
   const resultEl = document.getElementById('status-result');
   if (resultEl) resultEl.innerHTML = '<p style="color:#64748b;padding:1rem 0">Mencari data...</p>';
 
