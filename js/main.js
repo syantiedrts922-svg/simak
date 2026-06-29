@@ -133,7 +133,29 @@ let currentStep = 1;
 const totalSteps = 3;
 
 function nextStep() {
-  if (currentStep < totalSteps) { currentStep++; updateFormStep(); }
+  // Cek semua field required di step yang aktif
+  const stepEl = document.getElementById('step-' + currentStep);
+  const requiredFields = stepEl.querySelectorAll('[required]');
+  let valid = true;
+
+  requiredFields.forEach(field => {
+    field.style.borderColor = '';
+    if (!field.value.trim()) {
+      field.style.borderColor = '#ef4444';
+      valid = false;
+    }
+  });
+
+  if (!valid) {
+    alert('Mohon lengkapi semua field yang wajib diisi (ditandai *)');
+    return;
+  }
+
+  if (currentStep < totalSteps) {
+    currentStep++;
+    updateFormStep();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }
 function prevStep() {
   if (currentStep > 1) { currentStep--; updateFormStep(); }
