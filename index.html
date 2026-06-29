@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SIMAK — Pendaftaran Mahasiswa Baru 2025/2026</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <div class="nav-logo">🎓</div>
+        <span class="nav-title">SIMAK — Universitas Harapan Bangsa</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Beranda</a></li>
+        <li><a href="pages/panduan.html">Panduan</a></li>
+        <li><a href="pages/status.html">Cek Status</a></li>
+        <li><a href="pages/daftar.html" class="btn-nav">Daftar Sekarang</a></li>
+      </ul>
+      <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <span class="hero-badge">🎓 Penerimaan Mahasiswa Baru 2025/2026</span>
+      <h1>Daftarkan Diri ke <span class="highlight">Universitas Harapan Bangsa</span></h1>
+      <p>Platform pendaftaran terintegrasi dengan Google Form, Google Drive, Google Sheets, dan GitHub untuk pengalaman pendaftaran yang mudah, cepat, dan transparan.</p>
+      <div class="hero-cta">
+        <a href="pages/daftar.html" class="btn-primary">Mulai Pendaftaran →</a>
+        <a href="pages/panduan.html" class="btn-outline">Lihat Panduan</a>
+      </div>
+      <div class="hero-integrations">
+        <span class="int-pill">📋 Google Form</span>
+        <span class="int-pill">☁️ Google Drive</span>
+        <span class="int-pill">📊 Google Sheets</span>
+        <span class="int-pill">🐙 GitHub</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-bar">
+    <div class="stat-item">
+      <span class="stat-num" id="count-pendaftar">1.247</span>
+      <span class="stat-label">Pendaftar</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">850</span>
+      <span class="stat-label">Kuota Tersedia</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">12</span>
+      <span class="stat-label">Program Studi</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num" id="countdown">14</span>
+      <span class="stat-label">Hari Tersisa</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Alur Pendaftaran</h2>
+        <p>Ikuti 5 langkah mudah ini untuk menyelesaikan pendaftaran</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <div class="step-icon">🔑</div>
+          <h3>Login & Verifikasi</h3>
+          <p>Daftar akun dengan email aktif. Login via Google OAuth untuk keamanan data.</p>
+          <span class="step-tag tag-google">Google OAuth</span>
+        </div>
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <div class="step-icon">📋</div>
+          <h3>Isi Formulir</h3>
+          <p>Lengkapi data diri, pilihan prodi, dan informasi akademik melalui Google Form.</p>
+          <span class="step-tag tag-google">Google Form</span>
+        </div>
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <div class="step-icon">☁️</div>
+          <h3>Upload Dokumen</h3>
+          <p>Upload KTP, ijazah, transkrip nilai, dan foto ke Google Drive pribadi kamu.</p>
+          <span class="step-tag tag-drive">Google Drive</span>
+        </div>
+        <div class="step-card">
+          <div class="step-num">4</div>
+          <div class="step-icon">📊</div>
+          <h3>Verifikasi Admin</h3>
+          <p>Tim admin memverifikasi dokumen secara real-time melalui Google Sheets.</p>
+          <span class="step-tag tag-sheet">Google Sheets</span>
+        </div>
+        <div class="step-card">
+          <div class="step-num">5</div>
+          <div class="step-icon">🐙</div>
+          <h3>Pengumuman</h3>
+          <p>Hasil seleksi diumumkan melalui website GitHub Pages dan notifikasi email.</p>
+          <span class="step-tag tag-github">GitHub Pages</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-gray">
+    <div class="container">
+      <div class="section-header">
+        <h2>Integrasi Cloud</h2>
+        <p>Sistem kami terhubung langsung dengan layanan Google dan GitHub</p>
+      </div>
+      <div class="integration-grid">
+        <div class="int-card">
+          <div class="int-icon">📋</div>
+          <h3>Google Form</h3>
+          <p>Formulir pendaftaran online yang responsif. Setiap respons langsung tersimpan ke Google Sheets secara otomatis.</p>
+          <ul><li>Validasi input otomatis</li><li>Upload file langsung ke Drive</li><li>Konfirmasi email otomatis</li></ul>
+        </div>
+        <div class="int-card">
+          <div class="int-icon">☁️</div>
+          <h3>Google Drive</h3>
+          <p>Folder pribadi dibuat otomatis untuk setiap pendaftar via Apps Script saat submit form.</p>
+          <ul><li>Folder terorganisir per pendaftar</li><li>Akses terbatas hanya ke pemilik</li><li>Link folder dikirim via email</li></ul>
+        </div>
+        <div class="int-card">
+          <div class="int-icon">📊</div>
+          <h3>Google Sheets</h3>
+          <p>Database real-time untuk semua data pendaftar. Admin bisa monitor, filter, dan verifikasi langsung.</p>
+          <ul><li>Update status real-time</li><li>Laporan statistik otomatis</li><li>Dashboard admin terintegrasi</li></ul>
+        </div>
+        <div class="int-card">
+          <div class="int-icon">🐙</div>
+          <h3>GitHub</h3>
+          <p>Source code open source di GitHub. Website di-deploy ke GitHub Pages, CI/CD via GitHub Actions.</p>
+          <ul><li>Deploy otomatis ke GitHub Pages</li><li>Version control & dokumentasi</li><li>GitHub Actions untuk CI/CD</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta-section">
+    <div class="container text-center">
+      <h2>Siap Mendaftar?</h2>
+      <p>Kuota terbatas! Segera daftarkan diri sebelum 25 Juli 2025.</p>
+      <a href="pages/daftar.html" class="btn-primary btn-large">Daftar Sekarang →</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><h4>SIMAK</h4><p>Sistem Informasi Penerimaan Mahasiswa Baru<br>Universitas Harapan Bangsa</p></div>
+        <div><h4>Tautan</h4><ul><li><a href="pages/panduan.html">Panduan Pendaftaran</a></li><li><a href="pages/status.html">Cek Status</a></li><li><a href="https://github.com/username/simak" target="_blank">GitHub Repository</a></li></ul></div>
+        <div><h4>Jadwal</h4><ul><li>Buka: 1 Juli 2025</li><li>Tutup: 25 Juli 2025</li><li>Pengumuman: 5 Agustus 2025</li></ul></div>
+        <div><h4>Kontak</h4><ul><li>📧 pmb@uhb.ac.id</li><li>📱 (0271) 123-4567</li><li>🏛️ Jl. Pendidikan No. 1, Surakarta</li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>© 2025 Universitas Harapan Bangsa · Dibangun dengan Google Workspace & GitHub</p></div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

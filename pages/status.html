@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cek Status Pendaftaran — SIMAK</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand"><div class="nav-logo">🎓</div><span class="nav-title">SIMAK — Universitas Harapan Bangsa</span></div>
+      <ul class="nav-links">
+        <li><a href="../index.html">Beranda</a></li>
+        <li><a href="panduan.html">Panduan</a></li>
+        <li><a href="status.html" class="active">Cek Status</a></li>
+        <li><a href="daftar.html" class="btn-nav">Daftar Sekarang</a></li>
+      </ul>
+      <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <h1>📊 Cek Status Pendaftaran</h1>
+    <p>Masukkan nomor registrasi atau email untuk melihat status dokumenmu</p>
+  </div>
+
+  <div class="status-page">
+    <div class="container" style="max-width:680px">
+
+      <div class="status-search">
+        <p style="font-size:14px;color:#374151;margin-bottom:1rem;font-weight:500">Masukkan salah satu untuk mencari:</p>
+        <div class="search-row">
+          <input type="text" id="input-noreg" placeholder="Nomor Registrasi (cth: PMB-2025-0001)" />
+          <input type="email" id="input-email" placeholder="atau Email pendaftaran" />
+          <button class="btn-primary" onclick="cekStatus()">Cek Status</button>
+        </div>
+      </div>
+
+      <!-- Demo card — dalam produksi diisi oleh JS dari Apps Script -->
+      <div id="status-result">
+        <div class="status-card">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px;margin-bottom:1rem">
+            <div>
+              <h3>Budi Santoso</h3>
+              <p style="font-size:13px;color:#64748b">No. Registrasi: <strong>PMB-2025-0001</strong></p>
+            </div>
+            <span class="status-badge status-menunggu">Menunggu Dokumen</span>
+          </div>
+          <div class="info-grid">
+            <div class="info-item"><div class="info-label">Program Studi</div><div class="info-value">Teknik Informatika</div></div>
+            <div class="info-item"><div class="info-label">Pilihan 2</div><div class="info-value">Sistem Informasi</div></div>
+            <div class="info-item"><div class="info-label">Tanggal Daftar</div><div class="info-value">1 Juli 2025</div></div>
+            <div class="info-item"><div class="info-label">Dokumen</div><div class="info-value">2 dari 4 diupload</div></div>
+          </div>
+          <div class="status-timeline">
+            <h4>Riwayat Status</h4>
+            <div class="timeline-item">
+              <div class="timeline-dot dot-done"></div>
+              <div><div class="timeline-text">Formulir diterima</div><div class="timeline-time">1 Jul 2025, 10.23 WIB</div></div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot dot-done"></div>
+              <div><div class="timeline-text">Folder Google Drive dibuat & email dikirim</div><div class="timeline-time">1 Jul 2025, 10.24 WIB</div></div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot dot-active"></div>
+              <div><div class="timeline-text">Menunggu upload dokumen lengkap</div><div class="timeline-time">Sekarang</div></div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot dot-pending"></div>
+              <div><div class="timeline-text">Verifikasi admin</div><div class="timeline-time">Menunggu</div></div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot dot-pending"></div>
+              <div><div class="timeline-text">Pengumuman hasil seleksi</div><div class="timeline-time">5 Agustus 2025</div></div>
+            </div>
+          </div>
+          <div style="margin-top:1.25rem">
+            <a href="#" class="btn-secondary">☁️ Buka Folder Dokumen Drive</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container"><div class="footer-bottom"><p>© 2025 Universitas Harapan Bangsa · SIMAK PMB</p></div></div>
+  </footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>

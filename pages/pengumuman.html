@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pengumuman Hasil — SIMAK UHB</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-brand">
+      <div class="nav-logo">🎓</div>
+      <div>
+        <div class="nav-title">SIMAK</div>
+        <div class="nav-sub">Universitas Harapan Bangsa</div>
+      </div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Beranda</a></li>
+      <li><a href="daftar.html">Pendaftaran</a></li>
+      <li><a href="status.html">Cek Status</a></li>
+      <li><a href="pengumuman.html" class="active">Pengumuman</a></li>
+      <li><a href="https://github.com/your-org/simak" target="_blank" class="btn-github">🐙 GitHub</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <h1>📢 Pengumuman Hasil Seleksi</h1>
+  <p>Hasil seleksi akan diumumkan pada 5 Agustus 2025 via halaman ini dan email.</p>
+</div>
+
+<div class="page-content">
+
+  <div class="alert alert-warning">
+    ⏳ <strong>Pengumuman belum tersedia.</strong> Hasil seleksi akan diumumkan pada <strong>5 Agustus 2025</strong>. Halaman ini diperbarui otomatis dari Google Sheets.
+  </div>
+
+  <!-- COUNTDOWN -->
+  <div class="card" style="text-align:center; padding:2.5rem;">
+    <div style="font-size:13px; font-weight:600; letter-spacing:1px; text-transform:uppercase; color:var(--gray-500); margin-bottom:1rem;">Pengumuman dalam</div>
+    <div id="countdown" style="display:flex; gap:20px; justify-content:center; margin-bottom:1.5rem;">
+      <div style="background:var(--blue-dark); color:#fff; border-radius:12px; padding:16px 24px; min-width:80px;">
+        <div style="font-size:32px; font-weight:700;" id="cd-hari">43</div>
+        <div style="font-size:11px; opacity:0.7;">Hari</div>
+      </div>
+      <div style="background:var(--blue-dark); color:#fff; border-radius:12px; padding:16px 24px; min-width:80px;">
+        <div style="font-size:32px; font-weight:700;" id="cd-jam">12</div>
+        <div style="font-size:11px; opacity:0.7;">Jam</div>
+      </div>
+      <div style="background:var(--blue-dark); color:#fff; border-radius:12px; padding:16px 24px; min-width:80px;">
+        <div style="font-size:32px; font-weight:700;" id="cd-menit">30</div>
+        <div style="font-size:11px; opacity:0.7;">Menit</div>
+      </div>
+      <div style="background:var(--gold); color:#fff; border-radius:12px; padding:16px 24px; min-width:80px;">
+        <div style="font-size:32px; font-weight:700;" id="cd-detik">00</div>
+        <div style="font-size:11px; opacity:0.9;">Detik</div>
+      </div>
+    </div>
+    <p style="color:var(--gray-500); font-size:14px;">Pastikan email kamu aktif. Notifikasi akan dikirim otomatis saat pengumuman rilis.</p>
+  </div>
+
+  <!-- STATISTIK PRODI -->
+  <div class="card">
+    <div class="card-title">📊 Statistik Pendaftar per Program Studi</div>
+    <p style="font-size:14px; color:var(--gray-500); margin-bottom:1.5rem;">Data real-time dari Google Sheets · Diperbarui setiap 5 menit</p>
+    <div id="chart-prodi">
+      <div style="margin-bottom:14px;" id="bar-TI"></div>
+      <div style="margin-bottom:14px;" id="bar-KDK"></div>
+      <div style="margin-bottom:14px;" id="bar-MNJ"></div>
+      <div style="margin-bottom:14px;" id="bar-HKM"></div>
+      <div style="margin-bottom:14px;" id="bar-FAR"></div>
+      <div style="margin-bottom:14px;" id="bar-AKT"></div>
+    </div>
+  </div>
+
+  <!-- CARA CEK PENGUMUMAN -->
+  <div class="card">
+    <div class="card-title">ℹ️ Cara Mengecek Hasil Pengumuman</div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-num" style="background:var(--gold)">1</div>
+        <div class="timeline-content">
+          <h4>Via Halaman Ini (GitHub Pages)</h4>
+          <p>Tabel hasil seleksi akan muncul di halaman ini pada 5 Agustus 2025. Data bersumber dari Google Sheets yang diexport otomatis.</p>
+          <span class="tag tag-github">GitHub Pages</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-num" style="background:var(--gold)">2</div>
+        <div class="timeline-content">
+          <h4>Via Email</h4>
+          <p>Email otomatis dikirim ke semua pendaftar yang terdaftar di Google Sheets menggunakan Google Apps Script.</p>
+          <span class="tag tag-google">Gmail API</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-num" style="background:var(--gold)">3</div>
+        <div class="timeline-content">
+          <h4>Via Halaman Cek Status</h4>
+          <p>Buka halaman Cek Status dan masukkan nomor registrasi untuk melihat hasil seleksimu secara personal.</p>
+          <span class="tag tag-sheet">Google Sheets</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GITHUB TRANSPARENCY -->
+  <div class="card" style="background: linear-gradient(135deg, #0d2040, #1B3A6B); color:#fff;">
+    <div class="card-title" style="color:#fff;">🐙 Transparansi via GitHub</div>
+    <p style="color:rgba(255,255,255,0.7); font-size:14px; margin-bottom:1.25rem;">
+      Seluruh source code website ini tersedia secara terbuka di GitHub. Siapapun bisa mengaudit sistem pendaftaran ini.
+    </p>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:1.5rem;">
+      <div style="background:rgba(255,255,255,0.08); border-radius:10px; padding:1rem;">
+        <div style="font-size:18px; margin-bottom:6px;">📁</div>
+        <div style="font-size:13px; font-weight:600; color:#fff; margin-bottom:4px;">Source Code</div>
+        <div style="font-size:12px; color:rgba(255,255,255,0.55);">HTML, CSS, JS, Apps Script</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.08); border-radius:10px; padding:1rem;">
+        <div style="font-size:18px; margin-bottom:6px;">⚙️</div>
+        <div style="font-size:13px; font-weight:600; color:#fff; margin-bottom:4px;">GitHub Actions</div>
+        <div style="font-size:12px; color:rgba(255,255,255,0.55);">Auto-deploy ke GitHub Pages</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.08); border-radius:10px; padding:1rem;">
+        <div style="font-size:18px; margin-bottom:6px;">🔄</div>
+        <div style="font-size:13px; font-weight:600; color:#fff; margin-bottom:4px;">CI/CD Pipeline</div>
+        <div style="font-size:12px; color:rgba(255,255,255,0.55);">Update otomatis setiap commit</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.08); border-radius:10px; padding:1rem;">
+        <div style="font-size:18px; margin-bottom:6px;">📋</div>
+        <div style="font-size:13px; font-weight:600; color:#fff; margin-bottom:4px;">Issue Tracker</div>
+        <div style="font-size:12px; color:rgba(255,255,255,0.55);">Lapor bug & saran fitur</div>
+      </div>
+    </div>
+    <a href="https://github.com/your-org/simak" target="_blank" class="btn-primary">🐙 Lihat di GitHub →</a>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <p>© 2025 Universitas Harapan Bangsa · <a href="https://github.com/your-org/simak" target="_blank">GitHub</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script>
+// Countdown ke 5 Agustus 2025
+function updateCountdown() {
+  const target = new Date('2025-08-05T08:00:00');
+  const now    = new Date();
+  const diff   = target - now;
+  if (diff <= 0) return;
+  const hari   = Math.floor(diff / 86400000);
+  const jam    = Math.floor((diff % 86400000) / 3600000);
+  const menit  = Math.floor((diff % 3600000) / 60000);
+  const detik  = Math.floor((diff % 60000) / 1000);
+  document.getElementById('cd-hari').textContent   = hari;
+  document.getElementById('cd-jam').textContent    = String(jam).padStart(2,'0');
+  document.getElementById('cd-menit').textContent  = String(menit).padStart(2,'0');
+  document.getElementById('cd-detik').textContent  = String(detik).padStart(2,'0');
+}
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+// Bar chart sederhana
+const prodiData = [
+  { id:'TI',  nama:'Teknik Informatika', pendaftar:133, kuota:150 },
+  { id:'KDK', nama:'Kedokteran',         pendaftar:141, kuota:150 },
+  { id:'MNJ', nama:'Manajemen',          pendaftar:108, kuota:150 },
+  { id:'HKM', nama:'Ilmu Hukum',         pendaftar:82,  kuota:150 },
+  { id:'FAR', nama:'Farmasi',            pendaftar:97,  kuota:150 },
+  { id:'AKT', nama:'Akuntansi',          pendaftar:76,  kuota:150 },
+];
+prodiData.forEach(p => {
+  const pct = Math.round((p.pendaftar / p.kuota) * 100);
+  const color = pct >= 90 ? '#e53e3e' : pct >= 70 ? '#E8A020' : '#16a34a';
+  document.getElementById('bar-' + p.id).innerHTML = `
+    <div style="display:flex; align-items:center; gap:12px; margin-bottom:6px;">
+      <div style="font-size:13px; font-weight:500; width:160px; color:#4a5568;">${p.nama}</div>
+      <div style="flex:1; background:#e9ecf0; border-radius:10px; height:10px; overflow:hidden;">
+        <div style="width:${pct}%; height:100%; background:${color}; border-radius:10px;"></div>
+      </div>
+      <div style="font-size:12px; font-weight:600; color:${color}; min-width:60px; text-align:right;">${p.pendaftar}/${p.kuota} (${pct}%)</div>
+    </div>`;
+});
+</script>
+</body>
+</html>

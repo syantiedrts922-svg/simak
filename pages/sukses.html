@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pendaftaran Berhasil — SIMAK</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    .sukses-container { max-width: 560px; margin: 4rem auto; padding: 0 1.5rem; text-align: center; }
+    .sukses-icon { font-size: 64px; margin-bottom: 1.5rem; }
+    .sukses-card { background: #fff; border-radius: 16px; border: 1px solid #e2e8f0; padding: 2.5rem; }
+    .noreg-box { background: #f0f4f8; border-radius: 10px; padding: 1rem 1.5rem; margin: 1.5rem 0; border: 2px dashed #1B3A6B; }
+    .noreg-label { font-size: 12px; color: #64748b; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+    .noreg-value { font-size: 24px; font-weight: 700; color: #1B3A6B; margin-top: 4px; }
+    .next-steps { text-align: left; margin: 1.5rem 0; }
+    .next-step { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid #f1f5f9; font-size: 14px; }
+    .next-step:last-child { border-bottom: none; }
+    .step-check { color: #16a34a; font-size: 16px; flex-shrink: 0; }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand"><div class="nav-logo">🎓</div><span class="nav-title">SIMAK — Universitas Harapan Bangsa</span></div>
+      <ul class="nav-links">
+        <li><a href="../index.html">Beranda</a></li>
+        <li><a href="status.html">Cek Status</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="sukses-container">
+    <div class="sukses-icon">🎉</div>
+    <div class="sukses-card">
+      <h1 style="font-family:'Playfair Display',serif;font-size:1.7rem;color:#1B3A6B;margin-bottom:0.5rem">Pendaftaran Berhasil!</h1>
+      <p style="color:#64748b;font-size:15px">Selamat <strong id="nama-pendaftar"></strong>, formulirmu sudah kami terima.</p>
+
+      <div class="noreg-box">
+        <div class="noreg-label">Nomor Registrasi Kamu</div>
+        <div class="noreg-value" id="no-registrasi">PMB-2025-0001</div>
+      </div>
+
+      <div class="alert alert-success">✅ Email konfirmasi dan link folder Google Drive sudah dikirim ke email kamu.</div>
+
+      <div class="next-steps">
+        <p style="font-size:14px;font-weight:600;color:#374151;margin-bottom:0.5rem">Langkah selanjutnya:</p>
+        <div class="next-step"><span class="step-check">📧</span><span>Cek email — kamu akan menerima link folder Google Drive</span></div>
+        <div class="next-step"><span class="step-check">☁️</span><span>Upload dokumen (KTP, ijazah, rapor, foto) ke folder Drive tersebut</span></div>
+        <div class="next-step"><span class="step-check">📊</span><span>Pantau status verifikasi di halaman Cek Status</span></div>
+        <div class="next-step"><span class="step-check">📅</span><span>Pengumuman hasil seleksi: 5 Agustus 2025</span></div>
+      </div>
+
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:1.5rem">
+        <a href="status.html" class="btn-secondary">📊 Cek Status</a>
+        <a href="../index.html" class="btn-primary">Kembali ke Beranda</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const noReg  = params.get('noReg') || 'PMB-2025-0001';
+    const nama   = params.get('nama')  || 'Pendaftar';
+    document.getElementById('no-registrasi').textContent  = noReg;
+    document.getElementById('nama-pendaftar').textContent = decodeURIComponent(nama);
+  </script>
+</body>
+</html>

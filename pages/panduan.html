@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panduan Pendaftaran — SIMAK</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand"><div class="nav-logo">🎓</div><span class="nav-title">SIMAK — Universitas Harapan Bangsa</span></div>
+      <ul class="nav-links">
+        <li><a href="../index.html">Beranda</a></li>
+        <li><a href="panduan.html" class="active">Panduan</a></li>
+        <li><a href="status.html">Cek Status</a></li>
+        <li><a href="daftar.html" class="btn-nav">Daftar Sekarang</a></li>
+      </ul>
+      <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <h1>📖 Panduan Pendaftaran</h1>
+    <p>Baca panduan lengkap sebelum memulai proses pendaftaran</p>
+  </div>
+
+  <div class="panduan-page">
+    <div class="container" style="max-width:760px">
+
+      <div class="alert alert-info">ℹ️ Pendaftaran dibuka 1 Juli — 25 Juli 2025. Pengumuman hasil seleksi: 5 Agustus 2025.</div>
+
+      <div class="accordion">
+        <button class="accordion-header">📋 Langkah 1: Mengisi Google Form Pendaftaran <span>+</span></button>
+        <div class="accordion-body">
+          <p>Formulir pendaftaran menggunakan Google Form yang terintegrasi. Ikuti langkah berikut:</p>
+          <ol>
+            <li>Klik tombol <strong>"Daftar Sekarang"</strong> di halaman utama</li>
+            <li>Isi data pribadi: nama, NIK, tempat/tanggal lahir, jenis kelamin, WhatsApp, dan email aktif</li>
+            <li>Isi data asal sekolah: nama SMA/SMK/MA, jurusan, tahun lulus, dan nilai rata-rata rapor</li>
+            <li>Pilih program studi pertama dan cadangan, serta jalur masuk (Reguler/Beasiswa/Mandiri)</li>
+            <li>Klik <strong>"Kirim Pendaftaran"</strong> — data langsung masuk ke Google Sheets kami</li>
+          </ol>
+          <p style="margin-top:0.75rem">Setelah submit, kamu akan menerima email konfirmasi berisi <strong>Nomor Registrasi</strong> dan <strong>link folder Google Drive</strong>.</p>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <button class="accordion-header">☁️ Langkah 2: Upload Dokumen ke Google Drive <span>+</span></button>
+        <div class="accordion-body">
+          <p>Setelah mendapat email konfirmasi, buka link folder Google Drive dan upload dokumen berikut:</p>
+          <div class="doc-list">
+            <div class="doc-item">📄 KTP / Kartu Keluarga (scan/foto jelas)</div>
+            <div class="doc-item">📄 Ijazah atau Surat Keterangan Lulus</div>
+            <div class="doc-item">📄 Transkrip / Rapor SMA (semester 4-5)</div>
+            <div class="doc-item">🖼️ Foto terbaru 3×4 (latar merah/biru)</div>
+          </div>
+          <p style="margin-top:0.75rem"><strong>Ketentuan file:</strong></p>
+          <ul>
+            <li>Format: PDF atau JPG/PNG</li>
+            <li>Ukuran maksimal: 5 MB per file</li>
+            <li>Pastikan scan/foto jelas dan dapat dibaca</li>
+            <li>Beri nama file sesuai jenisnya (contoh: KTP_BudiSantoso.pdf)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <button class="accordion-header">📊 Langkah 3: Proses Verifikasi Admin <span>+</span></button>
+        <div class="accordion-body">
+          <p>Setelah semua dokumen terupload, tim admin akan melakukan verifikasi melalui Google Sheets:</p>
+          <ol>
+            <li>Admin mengecek kelengkapan dan keabsahan dokumen</li>
+            <li>Status pendaftaranmu akan diperbarui di sistem</li>
+            <li>Kamu akan menerima notifikasi email jika ada dokumen yang perlu diperbaiki</li>
+            <li>Proses verifikasi berlangsung 2-3 hari kerja</li>
+          </ol>
+          <p style="margin-top:0.75rem">Pantau status pendaftaranmu di halaman <a href="status.html" style="color:#1B3A6B;font-weight:600">Cek Status</a>.</p>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <button class="accordion-header">🐙 Langkah 4: Pengumuman via GitHub Pages <span>+</span></button>
+        <div class="accordion-body">
+          <p>Hasil seleksi akan diumumkan pada <strong>5 Agustus 2025</strong> melalui:</p>
+          <ul>
+            <li>Halaman pengumuman di website ini (GitHub Pages)</li>
+            <li>Email ke alamat yang didaftarkan</li>
+            <li>WhatsApp ke nomor yang dicantumkan</li>
+          </ul>
+          <p style="margin-top:0.75rem">Data pengumuman diambil langsung dari Google Sheets yang sudah diverifikasi admin dan ditampilkan secara otomatis di halaman GitHub Pages.</p>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <button class="accordion-header">❓ FAQ — Pertanyaan yang Sering Ditanyakan <span>+</span></button>
+        <div class="accordion-body">
+          <p><strong>Apakah bisa mengubah data setelah submit?</strong><br>Tidak bisa langsung. Hubungi panitia via email pmb@uhb.ac.id dengan menyertakan nomor registrasi.</p>
+          <br>
+          <p><strong>Bagaimana jika email konfirmasi tidak masuk?</strong><br>Cek folder Spam/Junk. Jika tidak ada, hubungi panitia.</p>
+          <br>
+          <p><strong>Apakah bisa mendaftar lebih dari sekali?</strong><br>Tidak. Satu NIK hanya bisa mendaftar satu kali. Pendaftaran ganda akan didiskualifikasi.</p>
+          <br>
+          <p><strong>Berapa lama proses verifikasi dokumen?</strong><br>2-3 hari kerja setelah semua dokumen lengkap terupload.</p>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:2.5rem">
+        <a href="daftar.html" class="btn-primary btn-large">Mulai Pendaftaran Sekarang →</a>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container"><div class="footer-bottom"><p>© 2025 Universitas Harapan Bangsa · SIMAK PMB</p></div></div>
+  </footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>
